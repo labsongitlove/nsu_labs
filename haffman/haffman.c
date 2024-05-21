@@ -259,7 +259,6 @@ void coding_text(wchar_t symbol_char, BITSTREAM *stream, SYMBOL ** symbols){
         i++;
     }
     SYMBOL *symbol = (*(symbols + i));
-    //printf("%d %d %d\n", symbol_char, symbol->symbol, symbol->length);
     
     for (int i = 0; i < symbol->length; i++){
         int bit = (symbol->code >> i) & 1;
